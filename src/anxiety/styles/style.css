@@ -30,7 +30,7 @@ body{
     --gray: #343434;
 }
 header{
-    overflow: hidden;
+    overflow-x: auto;
     width: 100vw;
     height: 100vh;
     
@@ -108,7 +108,7 @@ form{
     font-family: 'Poppins', "Arial","serif";
     width: 100vw;
     height: 100vh;
-    overflow-x: auto;
+    overflow-x: hidden;
     display: flex;
     background-image: url('../assets/fundo-azul.png');
     background-size: cover;
@@ -151,6 +151,11 @@ form .question h2 {
    margin: 0 auto;
     color:  #fff;
 
+}
+.question label{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 .question div{
     margin-top: 10px;
@@ -282,7 +287,7 @@ form .question h2 {
         font-size: 17px;
     }
     form h1{
-        font-size: 25px;
+        font-size: 30px;
         padding: 0 8px;
         
     }
@@ -291,7 +296,7 @@ form .question h2 {
     }
     form .question h2, .result h2{
         text-align: center;
-        font-size: 18px;
+        font-size: 19px;
         padding: 0 8px;
     }
     
@@ -299,12 +304,21 @@ form .question h2 {
         text-align: center;
         margin-top: 20px;
     }
+    .question div {
+        gap: 30px
+    }
+    .question label{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+    }
     .question div span{
         font-size: 20px;
     }
     .question div input{
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 }
 @media screen and (max-width: 420px){
@@ -321,5 +335,23 @@ form .question h2 {
 @media screen and (max-height: 600px){
     header .headerMain{
         gap: 35px;
+    }
+}
+@media screen and (max-height: 355px){
+    form h1{
+        margin-top: 22px;
+    }
+    .question  {
+        margin-top: 70px;
+    }
+}
+@media screen and (max-height: 210px){
+    form h1{
+        
+        display: none;
+        margin: 0px;
+    }
+    .question{
+        margin-top: 0px;
     }
 }
