@@ -224,14 +224,28 @@ form .question h2 {
 
 
 .result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(14, 13, 13);
+    padding: 0 10px;
+    
 }
 .result h2{
-    font-size: 45px;
+    text-align: center;
+    font-size: 27px;
     color: #fff
 }
 .result input{
     display: none;
+}
+.result img{
+    animation: toSpin 4s infinite alternate ease-in-out;
+    margin-top: 30px;
+    width:  160px;
+    height: 160px;
+
 }
 @media screen and (max-width: 900px){
     header .headerMain{
@@ -320,6 +334,7 @@ form .question h2 {
         width: 40px;
         height: 40px;
     }
+    
 }
 @media screen and (max-width: 420px){
    
@@ -333,8 +348,20 @@ form .question h2 {
     }
 }
 @media screen and (max-height: 600px){
+    form h1{
+        font-size: 24px;
+    }
     header .headerMain{
         gap: 35px;
+    }
+    .result h2 {
+
+        margin-top: 80px;
+        font-size: 18px;
+    }
+    .result img{
+        width: 90px;
+        height: 90px;
     }
 }
 @media screen and (max-height: 355px){
@@ -344,8 +371,9 @@ form .question h2 {
     .question  {
         margin-top: 70px;
     }
+   
 }
-@media screen and (max-height: 210px){
+@media screen and (max-height: 304px){
     form h1{
         
         display: none;
@@ -353,5 +381,15 @@ form .question h2 {
     }
     .question{
         margin-top: 0px;
+    }
+    .result h2{
+        margin-top: 0;
+    }
+}
+
+/*animation*/
+@keyframes toSpin {
+    100%{
+        transform: rotate(360deg);
     }
 }
