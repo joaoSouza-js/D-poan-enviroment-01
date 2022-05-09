@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avaliação da Ansiedae">
+    <meta name="keywords" content="Quais são os sintomas de ansiedade? O que a ansiedade pode causar? O que fazer para acabar com crise de ansiedade? | ">
+    <link rel="shortcut icon" href="../assets/dpoanIcon.png" type="image/x-icon">
+    <title>D'poan teste</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&Lato:ital,wght@0,400;0,700;0,900;1,300;1,400&family=Mulish:ital,wght@0,400;0,600;1,500&family=Roboto:wght@400;500&display=swap');
+
+@font-face {
+    font-family: 'Stencil';
+    src: url("../fonts/StencilStd.otf");
+   
+}
+@font-face {
+    font-family: "Akwe";
+    src: url('../fonts/AkweProRegular.otf');
+}
+*{  
+  
+    border:none;
+    outline: none;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    overflow: hidden;
+}
+:root{
+    --blue1: rgb(39, 173, 242);
+    --blue2: #287cfc;
+    --blue3: #3048e6;
+    --blue4: #4528fc;
+    --purpple: #7a27f2;
+    --gray: #343434;
+}
+header{
+   display: flex;
+   flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    color: white;
+}
+
+header h1{
+    font-family: 'Stencil','Times New Roman', Times, serif;
+    display: flex;
+    font-weight: 400;
+    padding: 20px 0px 0px 50px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--gray);
+    font-size: 50px ;
+}
+header h1 span{
+    position: relative;
+    top: -20px;
+    font-size: 35px;
+    font-family: "Arial";
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.89)
+}
+header .headerMain{
+   
+    flex: 1;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    /*https://storage.builderall.com//franquias/2/455925/editor-html/9844335.png
+    background-image: url('https://storage.builderall.com//franquias/2/455925/editor-html/4319632.png');
+    */
+    background-image: url('https://storage.builderall.com//franquias/2/455925/editor-html/9844335.png');
+}
+header .headerMain h2{
+    
+    text-align: left;
+    font-size: 37px;
+    margin-top: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande'
+}
+header .headerMain h2 span{
+    font-size: 52px; 
+    font-family: 'Lato',"Arial";
+}
+header .headerMain p{
+    
+    font-family: 'Mulish',Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+header .headerMain p,header .headerMain h3{
+    padding: 0 20px;
+    max-width: 500px;
+}
+header .headerMain h3{
+    font: 400 19px "Roboto";
+    
+}
+header button{
+
+    font: 400 17px 'Poppins',Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+header button a {
+    padding: 20px;
+
+    display: block;
+    text-underline-offset: none;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+    
+   
+}
+form{
+    font-family: 'Poppins', "Arial","serif";
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    background: linear-gradient(#00264D,#02386E);
+    background-size: cover;
+    
+}
+form::-webkit-scrollbar{
+    display: none;
+}
+
+form .question, form .result{
+    gap: 20px;
+    flex: none;
+    width: 100vw;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+form h1 {
+    font-size: 45px;
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    margin-top: 50px;
+    color: rgb(240, 240, 240);
+   
+}
+
+form h1 img{
+    width: 60px;
+}
+
+form .question h2 {
+    font-size: 35px;
+    width: 90%;
+    text-align: justify;
+    max-width: 800px;
+   margin: 0 auto;
+    color:  #fff;
+
+}
+.question label{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.question div{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    
+}
+.question div span{
+    font-size: 18px;
+    font-weight: 600;
+}
+.question div input {
+    display: inline-block;
+   clip-path: circle();
+    height: 50px;
+    width: 50px;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+.question div span{
+    font-size: 30px;
+    color: white;
+}
+
+.buttons .button{
+   
+
+    background: transparent;
+    border:  none;
+    cursor: pointer;
+    transition-duration: .4ms;
+}
+.button:hover{
+    opacity: 0.8;
+}
+
+.button img{
+    width: 60px;
+    
+    
+}
+
+.arrowToRight{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    transform: rotate(180deg)
+}
+.arrowToLeft{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    
+    right: 0;
+    margin: auto;
+   
+  
+}
+
+
+
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(14, 13, 13);
+    padding: 0 10px;
+    
+}
+.result h2{
+    text-align: center;
+    font-size: 27px;
+    color: #fff
+}
+.result input{
+    display: none;
+}
+.result img{
+    animation: toSpin 4s infinite alternate ease-in-out;
+    margin-top: 40px;
+    width:  130px;
+    height: 160px;
+
+}
+@media screen and (max-width: 900px){
+    header .headerMain{
+        background-size: cover;
+        background-position: center;
+        background-position-x: 80%;
+    }
+}
+@media screen and (max-width: 800px){
+    header h1{
+        text-align: center;
+    }
+    header h2{
+      
+        padding: 0 3px;
+    }
+    form h1{
+        font-size: 32px;
+        
+    }
+    form .question h2{
+        font-size: 20px;
+    }
+    .question{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    header .headerMain{
+        gap: 18px;
+        background-position-x: 0;
+        background-size: 220% 100%;
+        background-clip: content-box;
+        background-repeat: no-repeat;
+        background-position-x: 80%;
+    }
+    header h1 {
+       
+        padding: 15px 0px 10px 0px;
+    }
+    header h1 span {
+        margin-top: 15px;
+    }
+    header .headerMain h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    header .headerMain h2 span{
+        font-size: 35px;
+    }
+    header .headerMain p{
+        font-size: 14px;
+    }
+    header .headerMain h3{
+        font-size: 17px;
+    }
+    form h1{
+        font-size: 30px;
+        padding: 0 8px;
+        
+    }
+    form h1 img{
+        display: none;
+    }
+    form .question h2, .result h2{
+        text-align: center;
+        font-size: 19px;
+        padding: 0 8px;
+    }
+    
+    .question{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .question div {
+        gap: 30px
+    }
+    .question label{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+    }
+    .question div span{
+        font-size: 20px;
+    }
+    .question div input{
+        width: 40px;
+        height: 40px;
+    }
+    
+}
+@media screen and (max-width: 420px){
+   
+    header button{
+        max-width: 90%;
+        font-size: 15px;
+    }
+    header a{
+        padding: 10px;
+     
+    }
+    .headerMain{
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-height: 600px){
+    form h1{
+        font-size: 24px;
+    }
+    header .headerMain{
+        gap: 35px;
+    }
+    .result h2 {
+
+        margin-top: 80px;
+        font-size: 18px;
+    }
+    .result img{
+        width: 90px;
+        height: 90px;
+    }
+}
+@media screen and (max-height: 355px){
+    form h1{
+        margin-top: 22px;
+    }
+    .question  {
+        margin-top: 70px;
+    }
+   
+}
+@media screen and (max-height: 304px){
+    form h1{
+        
+        display: none;
+        margin: 0px;
+    }
+    .question{
+        margin-top: 0px;
+    }
+    .result h2{
+        margin-top: 0;
+    }
+}
+
+/*animation*/
+@keyframes toSpin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+    </style>
+        
+    <!--html-->
+        <header >
+            <div class="headerH1">
+                <h1>Teste <br> <span>Ansiedade</span></h1>
+            </div>
+            <section class="headerMain">
+                <h2>Importante <br> <span>Chega de Ansiedade</span></h2>
+                    <p>
+                        Esse questionário não tem fins diagnósticos e foi baseado em critérios
+                        internacionais de doenças da American Psychiatry Association (2014).
+                    </p>
+
+            
+                <h3>
+                        Responda sinceramente a cada uma das questões
+                        e **Não se preocupe, sua identidade não será divulgada!!**
+                </h3>
+                 <button><a href="#allQuestions">clique aqui para realizar o questionário</a></button>
+            </section>
+        </header>
+        <main>
+            
+            <form id="allQuestions"  >
+                <section class="formHeader">
+                    <h1>Teste de ansiedade D'poan
+                        <img src="../assets/dpoanIcon-removebg-preview.png" alt="">
+                    </h1>
+                </section>
+                <section class="question">
+                    <h2>1. Você tem preocupações excessivas e frequentes em relação a eventos futuros? </h2>
+                        <div>
+                         
+                            <label for="positiveAswer01">
+                                <input type="radio" name="radio1"  id="positiveAswer01"class="radio" value="5" onClick="soma()" aria-label="sim"/>
+                                 <span>Sim</span>
+                            </label>
+                            <label for="negativeAswer01">
+                                <input type="radio" name="radio1" id="negativeAswer01"  class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não</span>
+                            </label>
+                        </div> 
+                </section>
+          
+                <section class="question">
+                    <h2>2. Tem dificuldade em deixar de pensar nas preocupações?</h2>
+                    <div>
+                        <label for="positiveAswer02">
+                            <input type="radio" name="radio2" id="positiveAswer02" class="radio" value="5" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer02">
+                            <input type="radio" name="radio2" id="negativeAswer02" class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não</span>
+                        </label>
+                    </div>
+                </section>
+    
+                <section class="question">
+                    <h2>3. Sente uma inquietação constante? </h2>
+                    <div>
+                        <label for="positiveAswer03">
+                            <input type="radio" name="radio3" id="positiveAswer03"  class="radio" value="3" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer03">
+                            <input type="radio" name="radio3" id="negativeAswer03" class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não</span>
+                        </label>
+                    </div>             
+                </section>
+            
+                <section class="question">
+                    <h2>4. Sente que está constantemente com os "nervos à flor da pele"?</h2>
+                    <div>
+                        <label for="positiveAswer04">
+                            <input type="radio" name="radio4" id="positiveAswer04" class="radio" value="3" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer04">
+                            <input type="radio" name="radio4" id="negativeAswer04"  class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não</span>
+                        </label>
+                    </div>     
+                </section>
+            
+                <section class="question">
+                    <h2>5.Sente-se sempre cansado?  </h2>
+                    <div>
+                        <label for="positiveAswer05">
+                            <input type="radio" name="radio5" id="positiveAswer05" class="radio" value="1" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer05">
+                            <input type="radio" name="radio5" id="negativeAswer05"  class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não</span>
+                        </label>
+                    </div>             
+                </section>
+            
+                <section class="question">
+                    <h2>6. Tem dificuldade de se concentrar em atividades que antes não tinha dificuldade?</h2>
+                    <div>
+                        <label for="positiveAswer06">
+                            <input type="radio" name="radio6" id="positiveAswer06"  class="radio" value="1" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer06">
+                            <input type="radio" name="radio6" id="negativeAswer06"  class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não</span></label>
+                    </div>      
+                </section>
+            
+                <section class="question">
+                    <h2>7. Sente-se irritado constantemente? </h2>
+                    <div>
+                        <label for="positiveAswer07">
+                            <input type="radio" name="radio7" id="positiveAswer07"  class="radio" value="2" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer07">
+                            <input type="radio" name="radio7"  class="radio" id="negativeAswer07" value="0" onClick="soma()" aria-label="não"/> <span>Não</span>
+                        </label>
+                    </div>          
+                </section>
+            
+                <section class="question">
+                    <h2>8. Tem tensões musculares (p. ex: nos ombros e costas), mas não por atividade física? </h2>
+                    <div>
+                        <label for="positiveAswer08">
+                            <input type="radio" name="radio8" id="positiveAswer08"  class="radio" value="3" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="neagativeAswer08">
+                            <input type="radio" name="radio8"  class="radio" id="neagativeAswer08" class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não</span></label>
+                    </div>      
+                </section>
+            
+                <section class="question">
+                    <h2>9. Tem dificuldades para dormir ou dorme mal?  </h2>
+                    <div>
+                        <label for="positiveAswer09">
+                            <input type="radio" name="radio9" id="positiveAswer09"  class="radio" value="2" onClick="soma()"aria-label="sim" aria-label="não"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer09">
+                            <input type="radio" name="radio9" id="negativeAswer09"  class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não </span>
+                        </label>
+                    </div>             
+                </section>
+            
+                <section class="question">
+                    <h2>10 Tem dificuldades para descansar quando não está fazendo nada? </h2>
+                    <div>
+                        <label for="positiveAswer10">
+                            <input type="radio" name="radio10" id="positiveAswer10"  class="radio" value="3" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer10">
+                            <input type="radio" name="radio10" id="negativeAswer10"  class="radio" value="0" onClick="soma()" aria-label="não"/> <span>Não</span></label>
+                    </div>      
+                </section>
+                <section class="question">
+                    <h2>11. As dificuldades que sente interferem na sua vida afetiva, profissional ou acadêmica? </h2>
+                    <div>
+                        <label for="positiveAswer11">
+                            <input type="radio" name="radio11" id="positiveAswer11"  class="radio" value="5" onClick="soma()" aria-label="sim"/> <span>Sim</span>
+                        </label>
+                        <label for="negativeAswer11">
+                            <input type="radio" name="radio11" id="negativeAswer11"  class="radio" value="0" onClick="soma()"
+                            aria-label="não"/> <span>Não</span>
+                        </label>
+                    </div>     
+                </section>
+                <section class="result">
+                    <h2>Agurde momento, você está sendo redirecionado,<br/>
+                    se demorar mais de 30 segundos por favor feche a aba e tente novamente </h2>
+                    <img src="https://static.vecteezy.com/system/resources/previews/001/200/576/non_2x/hourglass-png.png" alt="hourGalass">
+                    <input type="text" name="total_valor" value="" size="30"/>
+                </section>
+            
+             </form>
+        </main>
+    <!--html-->
+    <script>
+        
+let handleScroll = {
+       allQuestionsCarossel: document.getElementById('allQuestions'),
+   
+       toRight(interval = 200){
+              let allQuestionsCarossel =  handleScroll.allQuestionsCarossel
+              let scroollViewWidht = allQuestionsCarossel.offsetWidth
+             
+              setTimeout(() => {
+                     allQuestionsCarossel.scrollLeft += scroollViewWidht
+              }, interval);
+              clearTimeout
+       },
+       toLeft(){
+              let allQuestionsCarossel =  handleScroll.allQuestionsCarossel
+              let scroollViewWidht = allQuestionsCarossel.offsetWidth
+             
+              setTimeout(() => {
+                     allQuestionsCarossel.scrollLeft -= scroollViewWidht
+              }, interval);
+              clearTimeout
+       }
+   }
+   function redirectUser(result = 0){
+   
+      
+       if(result <= 8){
+              try {
+                     window.location.href = ('https://ansiedade.futuro-agora.com/azul')
+              } catch (error) {
+                     
+              }
+                      window.location.assign('https://ansiedade.futuro-agora.com/azul')
+                      useful.alertMessage('você está sendo redirecionado')
+              return
+       }
+       if(result <= 17){
+              
+              window.location.assign('https://ansiedade.futuro-agora.com/cinza')
+              useful.alertMessage('você está sendo redirecionado')
+              return
+       }
+       if(result <= 33){
+              window.location.assign('https://ansiedade.futuro-agora.com/vermelho')
+              useful.alertMessage('você está sendo redirecionado')
+       }
+       
+   }
+   let useful = {
+       alertMessage(message = 'alerta'){
+              alert(message)
+       }
+   }
+   let handleInputRadios = {
+       allInputRadios: document.querySelectorAll('.radio'),
+       CheckInputRadio(){
+              let boxValues = {}
+              let numberBoxChecked = 0
+              let {allInputRadios} = handleInputRadios
+   
+              allInputRadios.forEach(checkBox  =>{
+                     if(checkBox.checked){
+                            numberBoxChecked++
+                            
+                            boxValues[`box${numberBoxChecked}`] = checkBox.value
+                            
+                     }
+                       
+              })
+       
+              return {numberBoxChecked,boxValues}
+       },
+       
+      
+       sumValuesChecked(){
+              let total = 0
+              let {boxValues} = handleInputRadios.CheckInputRadio()
+              
+              Object.keys(boxValues).map((key,value)=>{
+                     
+                     let newValue = parseInt(boxValues[key])
+                     total += newValue
+                    
+              })
+              return {total}
+       }
+   
+       
+   }
+   
+   function soma(){
+       
+           
+           if(handleInputRadios.CheckInputRadio().numberBoxChecked == 11){
+       
+                 redirectUser(handleInputRadios.sumValuesChecked().total)
+                 setTimeout(() => {
+                        location.href = "https://ansiedade.futuro-agora.com/azul?#"
+                 }, 2000);
+                 
+           }
+          handleScroll.toRight(200)
+    }
+    
+   
+    </script>
+</body>
+</html>
